@@ -119,7 +119,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 table {
@@ -133,5 +133,96 @@ table {
 html,
 body {
   height: 100%;
-  background: red;
+  font-size: 62.5%;
+}
+.info-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.head {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-order {
+  margin: 5px;
+  text-decoration: none;
+}
+.container {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid black;
+}
+.container h1 {
+  font-size: 6rem;
+  margin-top: 20px;
+}
+.container h2,
+.container h3 {
+  font-size: 4rem;
+}
+.container p {
+  font-size: 2rem;
+}
+.container .headshot {
+  width: 25%;
+  height: 170px;
+  padding-bottom: 3px;
+  border-bottom: 2px solid red;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+}
+header .intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  border-bottom: 2px solid red;
+  width: 100%;
+  padding-top: 10px;
+}
+header nav {
+  font-size: 1.8rem;
+}
+header nav a {
+  margin: 5px;
+  text-decoration: none;
+}
+header nav a:hover {
+  color: red;
+}
+header span {
+  color: red;
+}
+header address {
+  margin-top: 20px;
+  font-size: 2rem;
+  background: black;
+  color: white;
+  padding: 2px;
+}
+section {
+  padding: 20px;
+  text-align: center;
+}
+.mid {
+  margin-top: 30px;
+}
+.mid .skills {
+  margin-bottom: 20px;
+}
+.mid h2 {
+  margin-bottom: 10px;
+}
+.mid .uls {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid red;
+  padding-top: 10px;
+}
+.mid li {
+  font-size: 2rem;
+  padding-top: 5px;
 }
