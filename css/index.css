@@ -162,6 +162,11 @@ body {
 }
 @media (max-width: 500px) {
   .container {
+    font-family: 'ZCOOL KuaiLe', cursive;
+  }
+}
+@media (max-width: 500px) {
+  .container {
     width: 100%;
   }
 }
