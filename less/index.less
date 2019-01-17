@@ -146,6 +146,7 @@ body {
 @color-red: 2px solid red;
 @h1-size: 6rem;
 @h2-size: 4rem;
+@h3-size: 3rem;
 
 //Mixins//
 .info-top {
@@ -164,6 +165,17 @@ body {
   text-decoration: none;
 }
 
+.section-end {
+	border-top: @color-red;
+			padding-top: 10px;
+}
+
+.name-address-cascade {
+	display: flex;
+			align-items: baseline;
+			margin-top: 10px;
+}
+
 //Reg Code
 .container {
   width: 1000px;
@@ -176,8 +188,24 @@ body {
 	margin-top: 20px;
   }
 
-  h2, h3 {
-    font-size: @h2-size;
+  h2, {
+	font-size: @h2-size;
+	padding-bottom: 15px
+  }
+
+  h3 {
+	  font-size: @h3-size;
+  }
+
+  h4 {
+	  font-size: 2.5rem;
+	  text-decoration: underline;
+	  margin: 20px 0 5px;
+  }
+
+  date {
+	  font-size: 15px;
+	  padding-top:10px;
   }
 
   p {
@@ -189,6 +217,14 @@ body {
 	height: 170px;
 	padding-bottom: 3px;
 	border-bottom: @color-red;
+  }
+
+  li {
+	  margin: 7px 0;
+  }
+
+  .direction {
+	  font-size: 1.5rem;
   }
 }
 
@@ -238,21 +274,65 @@ section {
 
 	.skills{
 		margin-bottom: 20px;
+
+		h2 {
+			margin-bottom: 10px;
+		}
+		.uls {
+			.head;
+			.section-end;
+		}
+	
+	
+		li {
+			font-size: 2rem;
+			padding-top: 5px;
+		}
 	}
 
+	.work-history {
+		margin-top: 40px;
+
+		.heading {
+			.head;
+			.section-end;
+		}
+
+		.name-address {
+			.name-address-cascade
+		}
+
+		.content {
+			.heading{
+				border: none;
+
+				h3 {
+					padding-top: 20px;
+				}
+				
+			}
+		}
+	}
+
+	
+
+}
+
+.bottom {
+	margin-top: 40px;
+
+	h4 {
+		text-decoration: none;
+		padding-left: 10px;
+	}
+	
 	h2 {
-		margin-bottom: 10px;
-	}
-	.uls {
-		.head;
-		border-top: @color-red;
-		padding-top: 10px;
+		border-bottom: @color-red;
 	}
 
+	.certificate {
+		margin-top: 50px;
 
-	li {
-		font-size: 2rem;
-		padding-top: 5px;
+		
 	}
-
 }

@@ -148,6 +148,15 @@ body {
   margin: 5px;
   text-decoration: none;
 }
+.section-end {
+  border-top: 2px solid red;
+  padding-top: 10px;
+}
+.name-address-cascade {
+  display: flex;
+  align-items: baseline;
+  margin-top: 10px;
+}
 .container {
   width: 1000px;
   margin: 0 auto;
@@ -158,9 +167,21 @@ body {
   font-size: 6rem;
   margin-top: 20px;
 }
-.container h2,
-.container h3 {
+.container h2 {
   font-size: 4rem;
+  padding-bottom: 15px;
+}
+.container h3 {
+  font-size: 3rem;
+}
+.container h4 {
+  font-size: 2.5rem;
+  text-decoration: underline;
+  margin: 20px 0 5px;
+}
+.container date {
+  font-size: 15px;
+  padding-top: 10px;
 }
 .container p {
   font-size: 2rem;
@@ -170,6 +191,12 @@ body {
   height: 170px;
   padding-bottom: 3px;
   border-bottom: 2px solid red;
+}
+.container li {
+  margin: 7px 0;
+}
+.container .direction {
+  font-size: 1.5rem;
 }
 header {
   display: flex;
@@ -213,16 +240,49 @@ section {
 .mid .skills {
   margin-bottom: 20px;
 }
-.mid h2 {
+.mid .skills h2 {
   margin-bottom: 10px;
 }
-.mid .uls {
+.mid .skills .uls {
   display: flex;
   justify-content: space-between;
   border-top: 2px solid red;
   padding-top: 10px;
 }
-.mid li {
+.mid .skills li {
   font-size: 2rem;
   padding-top: 5px;
+}
+.mid .work-history {
+  margin-top: 40px;
+}
+.mid .work-history .heading {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid red;
+  padding-top: 10px;
+}
+.mid .work-history .name-address {
+  display: flex;
+  align-items: baseline;
+  margin-top: 10px;
+}
+.mid .work-history .content .heading {
+  border: none;
+}
+.mid .work-history .content .heading h3 {
+  padding-top: 20px;
+}
+.bottom {
+  margin-top: 40px;
+}
+.bottom h4 {
+  text-decoration: none;
+  padding-left: 10px;
+}
+.bottom h2 {
+  border-bottom: 2px solid red;
+}
+.bottom .certificate {
+  margin-top: 50px;
 }
