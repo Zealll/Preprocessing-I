@@ -110,9 +110,7 @@ body {
   line-height: 1;
 }
 ol,
-ul {
-  list-style: none;
-}
+
 blockquote,
 q {
   quotes: none;
@@ -166,14 +164,14 @@ body {
 }
 
 .section-end {
-	border-top: @color-red;
-			padding-top: 10px;
+  border-top: @color-red;
+  padding-top: 10px;
 }
 
 .name-address-cascade {
-	display: flex;
-			align-items: baseline;
-			margin-top: 10px;
+  display: flex;
+  align-items: baseline;
+  margin-top: 10px;
 }
 
 //Reg Code
@@ -184,47 +182,51 @@ body {
   border: 1px solid black;
 
   h1 {
-	font-size: @h1-size;
-	margin-top: 20px;
+    font-size: @h1-size;
+    margin-top: 20px;
   }
 
-  h2, {
-	font-size: @h2-size;
-	padding-bottom: 15px
+  h2 {
+    font-size: @h2-size;
+    padding-bottom: 15px;
   }
 
   h3 {
-	  font-size: @h3-size;
+    font-size: @h3-size;
   }
 
   h4 {
-	  font-size: 2.5rem;
-	  text-decoration: underline;
-	  margin: 20px 0 5px;
+    font-size: 2.5rem;
+    text-decoration: underline;
+    margin: 20px 0 5px;
   }
 
   date {
-	  font-size: 15px;
-	  padding-top:10px;
+    font-size: 15px;
+    padding-top: 10px;
   }
 
   p {
-	  font-size: 2rem;
+    font-size: 2rem;
   }
 
   .headshot {
     width: 25%;
-	height: 170px;
-	padding-bottom: 3px;
-	border-bottom: @color-red;
+    height: 170px;
+    padding-bottom: 3px;
+    border-bottom: @color-red;
   }
 
   li {
-	  margin: 7px 0;
+    margin: 7px 0;
   }
 
   .direction {
-	  font-size: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  ul {
+    margin-left: 40px;
   }
 }
 
@@ -235,8 +237,7 @@ header {
     .info-top;
     border-bottom: @color-red;
     width: 100%;
-	padding-top: 10px;
-	
+    padding-top: 10px;
   }
 
   nav {
@@ -252,87 +253,80 @@ header {
   }
 
   span {
-	  color: red;
+    color: red;
   }
 
   address {
-	  margin-top: 20px;
-	  font-size: 2rem;
-	  background: black;
-	  color: white;
-	  padding: 2px;
+    margin-top: 20px;
+    font-size: 2rem;
+    background: black;
+    color: white;
+    padding: 2px;
   }
 }
 
 section {
-	padding: 20px;
-	text-align: center;
+  padding: 20px;
+  text-align: center;
 }
 
 .mid {
-	margin-top: 30px;
+  margin-top: 30px;
 
-	.skills{
-		margin-bottom: 20px;
+  .skills {
+    margin-bottom: 20px;
 
-		h2 {
-			margin-bottom: 10px;
-		}
-		.uls {
-			.head;
-			.section-end;
-		}
-	
-	
-		li {
-			font-size: 2rem;
-			padding-top: 5px;
-		}
-	}
+    h2 {
+      margin-bottom: 10px;
+    }
+    .uls {
+      .head;
+      .section-end;
+    }
 
-	.work-history {
-		margin-top: 40px;
+    li {
+      font-size: 2rem;
+      padding-top: 5px;
+    }
+  }
 
-		.heading {
-			.head;
-			.section-end;
-		}
+  .work-history {
+    margin-top: 40px;
 
-		.name-address {
-			.name-address-cascade
-		}
+    .heading {
+      .head;
+      .section-end;
+    }
 
-		.content {
-			.heading{
-				border: none;
+    .name-address {
+      .name-address-cascade;
+    }
 
-				h3 {
-					padding-top: 20px;
-				}
-				
-			}
-		}
-	}
+    .content {
+      .heading {
+        border: none;
 
-	
-
+        h3 {
+          padding-top: 20px;
+        }
+      }
+    }
+  }
 }
 
 .bottom {
-	margin-top: 40px;
+  margin-top: 40px;
 
-	h4 {
-		text-decoration: none;
-		padding-left: 10px;
-	}
-	
-	h2 {
-		border-bottom: @color-red;
-	}
+  h4 {
+    text-decoration: none;
+    padding-left: 10px;
+  }
 
-	.certificate {
-		margin-top: 50px;
+  h2 {
+    border-bottom: @color-red;
+  }
 
-		
-	}
+  .certificate {
+    margin-top: 50px;
+  }
 }
