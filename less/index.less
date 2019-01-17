@@ -4,56 +4,372 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+
+blockquote,
+q {
+  quotes: none;
 }
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
 }
 
+//My Code//
+
+//variables//
+@color-red: 2px solid red;
+@h1-size: 6rem;
+@h2-size: 4rem;
+@h3-size: 3rem;
+
+//Mixins//
+.info-top {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-order {
+  margin: 5px;
+  text-decoration: none;
+}
+
+.section-end {
+  border-top: @color-red;
+  padding-top: 10px;
+}
+
+.name-address-cascade {
+  display: flex;
+  align-items: baseline;
+  margin-top: 10px;
+}
+
+//Reg Code
+.container {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid black;
+  @media(max-width: 500px) {
+    font-family: 'ZCOOL KuaiLe', cursive;
+  }
+
+  @media(max-width: 500px) {
+    width:100%;
+  }
+
+  h1 {
+    font-size: @h1-size;
+    margin-top: 20px;
+  }
+
+  h2 {
+    font-size: @h2-size;
+    padding-bottom: 15px;
+  }
+
+  h3 {
+    font-size: @h3-size;
+    @media(max-width: 500px) {
+      font-size: 2rem;
+    }
+  }
+
+  h4 {
+    font-size: 2.5rem;
+    text-decoration: underline;
+    margin: 20px 0 5px;
+    @media(max-width: 500px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  date {
+    font-size: 15px;
+    padding-top: 10px;
+  }
+
+  p {
+    font-size: 2rem;
+  }
+
+  .headshot {
+    width: 25%;
+    height: 170px;
+    padding-bottom: 3px;
+    border-bottom: @color-red;
+    @media(max-width: 500px) {
+      width: 100%;
+    }
+  }
+
+  li {
+    margin: 7px 0;
+  }
+
+  .direction {
+    font-size: 1.5rem;
+  }
+
+  ul {
+    margin-left: 40px;
+  }
+}
+
+header {
+  .head;
+
+  .intro {
+    .info-top;
+    border-bottom: @color-red;
+    width: 100%;
+    padding-top: 10px;
+    @media(max-width: 500px) {
+      text-align: center;
+
+      nav {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  nav {
+    font-size: 1.8rem;
+  }
+
+  nav a {
+    .nav-order;
+  }
+
+  nav a:hover {
+    color: red;
+  }
+
+  span {
+    color: red;
+  }
+
+  address {
+    margin-top: 20px;
+    font-size: 2rem;
+    background: black;
+    color: white;
+    padding: 2px;
+  }
+
+  @media(max-width:500px) {
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+  }
+}
+
+section {
+  padding: 20px;
+  text-align: center;
+}
+
+.mid {
+  margin-top: 30px;
+
+ 
+
+  .skills {
+    margin-bottom: 20px;
+
+    @media(max-width: 500px) {
+      text-align: center;
+    }
+
+    
+
+    h2 {
+      margin-bottom: 10px;
+    }
+    .uls {
+      .head;
+      .section-end;
+      @media(max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    li {
+      font-size: 2rem;
+      padding-top: 5px;
+      
+    }
+  }
+
+  .work-history {
+    margin-top: 40px;
+
+    .heading {
+      .head;
+      .section-end;
+      
+    }
+
+    .name-address {
+      .name-address-cascade;
+    }
+
+    .content {
+      .heading {
+        border: none;
+
+        h3 {
+          padding-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+.bottom {
+  margin-top: 40px;
+
+  h4 {
+    text-decoration: none;
+    padding-left: 10px;
+  }
+
+  h2 {
+    border-bottom: @color-red;
+  }
+
+  .certificate {
+    margin-top: 50px;
+  }
+}
