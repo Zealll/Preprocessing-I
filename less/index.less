@@ -181,6 +181,10 @@ body {
   padding: 20px;
   border: 1px solid black;
 
+  @media(max-width: 500px) {
+    width:100%;
+  }
+
   h1 {
     font-size: @h1-size;
     margin-top: 20px;
@@ -193,12 +197,18 @@ body {
 
   h3 {
     font-size: @h3-size;
+    @media(max-width: 500px) {
+      font-size: 2rem;
+    }
   }
 
   h4 {
     font-size: 2.5rem;
     text-decoration: underline;
     margin: 20px 0 5px;
+    @media(max-width: 500px) {
+      font-size: 1.5rem;
+    }
   }
 
   date {
@@ -215,6 +225,9 @@ body {
     height: 170px;
     padding-bottom: 3px;
     border-bottom: @color-red;
+    @media(max-width: 500px) {
+      width: 100%;
+    }
   }
 
   li {
@@ -238,6 +251,13 @@ header {
     border-bottom: @color-red;
     width: 100%;
     padding-top: 10px;
+    @media(max-width: 500px) {
+      text-align: center;
+
+      nav {
+        margin-right: 10px;
+      }
+    }
   }
 
   nav {
@@ -263,6 +283,12 @@ header {
     color: white;
     padding: 2px;
   }
+
+  @media(max-width:500px) {
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+  }
 }
 
 section {
@@ -273,8 +299,16 @@ section {
 .mid {
   margin-top: 30px;
 
+ 
+
   .skills {
     margin-bottom: 20px;
+
+    @media(max-width: 500px) {
+      text-align: center;
+    }
+
+    
 
     h2 {
       margin-bottom: 10px;
@@ -282,11 +316,16 @@ section {
     .uls {
       .head;
       .section-end;
+      @media(max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+      }
     }
 
     li {
       font-size: 2rem;
       padding-top: 5px;
+      
     }
   }
 
@@ -296,6 +335,7 @@ section {
     .heading {
       .head;
       .section-end;
+      
     }
 
     .name-address {

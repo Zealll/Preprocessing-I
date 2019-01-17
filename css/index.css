@@ -160,6 +160,11 @@ body {
   padding: 20px;
   border: 1px solid black;
 }
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+  }
+}
 .container h1 {
   font-size: 6rem;
   margin-top: 20px;
@@ -171,10 +176,20 @@ body {
 .container h3 {
   font-size: 3rem;
 }
+@media (max-width: 500px) {
+  .container h3 {
+    font-size: 2rem;
+  }
+}
 .container h4 {
   font-size: 2.5rem;
   text-decoration: underline;
   margin: 20px 0 5px;
+}
+@media (max-width: 500px) {
+  .container h4 {
+    font-size: 1.5rem;
+  }
 }
 .container date {
   font-size: 15px;
@@ -188,6 +203,11 @@ body {
   height: 170px;
   padding-bottom: 3px;
   border-bottom: 2px solid red;
+}
+@media (max-width: 500px) {
+  .container .headshot {
+    width: 100%;
+  }
 }
 .container li {
   margin: 7px 0;
@@ -210,6 +230,14 @@ header .intro {
   width: 100%;
   padding-top: 10px;
 }
+@media (max-width: 500px) {
+  header .intro {
+    text-align: center;
+  }
+  header .intro nav {
+    margin-right: 10px;
+  }
+}
 header nav {
   font-size: 1.8rem;
 }
@@ -230,6 +258,13 @@ header address {
   color: white;
   padding: 2px;
 }
+@media (max-width: 500px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
 section {
   padding: 20px;
   text-align: center;
@@ -240,6 +275,11 @@ section {
 .mid .skills {
   margin-bottom: 20px;
 }
+@media (max-width: 500px) {
+  .mid .skills {
+    text-align: center;
+  }
+}
 .mid .skills h2 {
   margin-bottom: 10px;
 }
@@ -248,6 +288,12 @@ section {
   justify-content: space-between;
   border-top: 2px solid red;
   padding-top: 10px;
+}
+@media (max-width: 500px) {
+  .mid .skills .uls {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .mid .skills li {
   font-size: 2rem;
